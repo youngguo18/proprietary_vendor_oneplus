@@ -6,24 +6,6 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
-	name: "libantradio",
-	owner: "lge",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/lib/libantradio.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/lib64/libantradio.so"],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libplatformconfig",
 	owner: "lge",
 	strip: {
@@ -100,58 +82,6 @@ cc_prebuilt_library_shared {
 }
 
 android_app_import {
-	name: "NxpNfcNci",
-	owner: "lge",
-	apk: "proprietary/app/NxpNfcNci/NxpNfcNci.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-}
-
-android_app_import {
-	name: "NxpSecureElement",
-	owner: "lge",
-	apk: "proprietary/app/NxpSecureElement/NxpSecureElement.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-}
-
-android_app_import {
-	name: "SoterService",
-	owner: "lge",
-	apk: "proprietary/app/SoterService/SoterService.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-}
-
-android_app_import {
-	name: "HotwordEnrollmentOKGoogleWCD9340",
-	owner: "lge",
-	apk: "proprietary/priv-app/HotwordEnrollmentOKGoogleWCD9340/HotwordEnrollmentOKGoogleWCD9340.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-}
-
-android_app_import {
-	name: "HotwordEnrollmentXGoogleWCD9340",
-	owner: "lge",
-	apk: "proprietary/priv-app/HotwordEnrollmentXGoogleWCD9340/HotwordEnrollmentXGoogleWCD9340.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-}
-
-android_app_import {
 	name: "WfdService",
 	owner: "lge",
 	apk: "proprietary/priv-app/WfdService/WfdService.apk",
@@ -177,28 +107,6 @@ android_app_import {
 	name: "IWlanService",
 	owner: "lge",
 	apk: "proprietary/vendor/app/IWlanService/IWlanService.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	soc_specific: true,
-}
-
-android_app_import {
-	name: "PowerOffAlarm",
-	owner: "lge",
-	apk: "proprietary/vendor/app/PowerOffAlarm/PowerOffAlarm.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	soc_specific: true,
-}
-
-android_app_import {
-	name: "QFingerprintService",
-	owner: "lge",
-	apk: "proprietary/vendor/app/QFingerprintService/QFingerprintService.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -240,13 +148,26 @@ android_app_import {
 }
 
 android_app_import {
-	name: "uceShimService",
+	name: "HotwordEnrollmentOKGoogleHEXAGON",
 	owner: "lge",
-	apk: "proprietary/product/app/uceShimService/uceShimService.apk",
+	apk: "proprietary/product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
+	privileged: true,
+	product_specific: true,
+}
+
+android_app_import {
+	name: "HotwordEnrollmentXGoogleHEXAGON",
+	owner: "lge",
+	apk: "proprietary/product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
 	product_specific: true,
 }
 
@@ -263,9 +184,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "ims",
+	name: "qcrilmsgtunnel",
 	owner: "lge",
-	apk: "proprietary/product/priv-app/ims/ims.apk",
+	apk: "proprietary/product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -275,9 +196,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "qcrilmsgtunnel",
+	name: "seccamservice",
 	owner: "lge",
-	apk: "proprietary/product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk",
+	apk: "proprietary/product/priv-app/seccamservice/seccamservice.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,

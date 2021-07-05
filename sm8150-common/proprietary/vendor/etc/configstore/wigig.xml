@@ -11,7 +11,7 @@
 <CapabilityStore version="1">
    <namespace name="wigig">
      <capability key="max_num_sta" value="8" />
-     <capability key="npt.rps" value="206"/>
+     <capability key="npt.rps" value="192"/>
      <capability key="npt.gro_flush_timeout" value="2000"/>
      <capability key="npt.tcp_limit_output_bytes" value="8800000"/>
      <capability key="fst.data.interface" value="bond0"/>
